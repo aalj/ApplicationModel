@@ -31,8 +31,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-//    implementation project(':mvp')
-    implementation 'net.lll0.mvp:mvp:1.0.0'
-//    api(name:'mvp',ext:"aar")
+    implementation project(':mvplib')
 
 }
