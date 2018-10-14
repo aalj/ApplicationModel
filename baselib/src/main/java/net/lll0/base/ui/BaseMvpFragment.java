@@ -1,4 +1,4 @@
-package net.lll0.app.base;
+package net.lll0.base.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import net.lll0.mvp.base.presenter.MvpPresenter;
 import net.lll0.mvp.base.view.MvpView;
 import net.lll0.mvp.supper.ui.MvpFragment;
+
 
 /**
  * Created by liangjun on 2018/10/13
