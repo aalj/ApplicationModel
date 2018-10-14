@@ -104,7 +104,7 @@ public class ActivityMvpDelegateImpl<V extends MvpView, P extends MvpPresenter<V
     public Object onRetainCustomNonConfigurationInstance() {
         boolean retained = activityMvpDelegateCallback.shouldInstanceBeRetained();
         P presenter = retained ? activityMvpDelegateCallback.getPresenter() : null;
-        Object o = activityMvpDelegateCallback.onRetainCustomNonConfigurationInstance();
+        Object o = activityMvpDelegateCallback.getLastCustomNonConfigurationInstance();
         if (presenter == null && o == null) {
             return null;
         }
