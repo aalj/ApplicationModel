@@ -20,6 +20,9 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //为了使用PhotoView使用 应用的库
+        maven { url "https://jitpack.io" }
+
     }
 }
 

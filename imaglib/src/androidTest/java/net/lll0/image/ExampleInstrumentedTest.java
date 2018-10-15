@@ -1,4 +1,4 @@
-package net.lll0.imag;
+package net.lll0.image;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("net.lll0.imag.test", appContext.getPackageName());
+        assertEquals("net.lll0.image.test", appContext.getPackageName());
     }
 }

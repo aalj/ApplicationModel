@@ -1,18 +1,16 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.android.compileSdkVersion
 
 
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -31,4 +29,11 @@ dependencies {
     testImplementation 'junit:junit:'+rootProject.ext.version["junit-version"]
     androidTestImplementation 'com.android.support.test:runner:'+rootProject.ext.version["test-runner"]
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:'+rootProject.ext.version["espresso-core"]
+
+    //图片加载框架
+    implementation(rootProject.ext.dependencies["glide"]) {
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    api rootProject.ext.dependencies["PhotoView"]
 }
