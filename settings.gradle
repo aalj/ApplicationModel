@@ -1,1 +1,1 @@
-include ':app', ':mvplib', ':baselib', ':imaglib'
+include ':app', ':mvplib', ':baselib', ':imaglib', ':scanlib'
