@@ -39,6 +39,8 @@ class KotlinMainActivity : AppCompatActivity(), View.OnClickListener {
         clear_text.onFocusChangeListener = View.OnFocusChangeListener { _, _ ->
         }
 
+        sms.setOnClickListener(this)
+        restart.setOnClickListener(this)
 
     }
 
@@ -52,6 +54,14 @@ class KotlinMainActivity : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this, MyUtils.getString(), Toast.LENGTH_SHORT).show()
                 var info = edit.text.toString()
                 text.text = info
+            }
+            R.id.sms -> {
+                Log.e("KotlinMainActivity", "开始倒计时")
+                sms.startCountDown()
+            }
+            R.id.restart -> {
+                Log.e("KotlinMainActivity", "重置倒计时")
+                sms.restart()
             }
         }
     }

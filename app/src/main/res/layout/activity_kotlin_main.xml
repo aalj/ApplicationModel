@@ -24,12 +24,29 @@
         style="@style/ViewEditStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/sms"
         app:layout_constraintTop_toBottomOf="@id/edit" />
 
+
     <View
+        android:id="@+id/line1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/base_dp_1"
         android:background="@color/view_FFA4A4A4"
         app:layout_constraintTop_toBottomOf="@id/clear_text" />
+
+    <net.lll0.view.SendSmsButton
+        android:id="@+id/sms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/base_dp_20"
+        app:layout_constraintTop_toBottomOf="@id/line1" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="倒计时重置"
+        app:layout_constraintTop_toBottomOf="@id/sms" />
 
 </android.support.constraint.ConstraintLayout>
