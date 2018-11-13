@@ -1,2 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.lll0.base" />
+    package="net.lll0.base">
+
+
+    <application android:name=".BaseApplication"></application>
+
+</manifest>
