@@ -3,6 +3,7 @@ package net.lll0.base.ui;
 import android.os.Build;
 import android.os.Bundle;
 
+import net.lll0.base.R;
 import net.lll0.mvp.base.presenter.impl.MvpPresenterImpl;
 import net.lll0.mvp.base.view.MvpView;
 import net.lll0.mvp.supper.ui.MvpActivity;
@@ -25,8 +26,17 @@ public abstract class BaseMvpActivity<V extends MvpView,P extends MvpPresenterIm
         initData();
     }
 
+
+
+    /**
+     * 获取布局的id
+     * @return
+     */
     protected abstract int getLayoutId();
 
+    /**
+     * 初始化视图控件
+     */
     protected abstract void initView();
 
     /**
@@ -35,11 +45,16 @@ public abstract class BaseMvpActivity<V extends MvpView,P extends MvpPresenterIm
     protected void initPermission() {
     }
 
-    ;
 
+    /**
+     * 初始化方法 处于初始化视图和初始化数据中间
+     */
     protected void init() {
     }
 
+    /**
+     * 初始化数据
+     */
     protected abstract void initData();
 
 }
