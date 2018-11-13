@@ -8,5 +8,18 @@
         <item name="android:padding">@dimen/base_dp_10</item>
     </style>
 
+    <style name="ButtonStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">@dimen/base_dp_13</item>
+        <item name="android:layout_marginLeft">@dimen/base_dp_36</item>
+        <item name="android:layout_marginTop">@dimen/base_dp_13</item>
+        <item name="android:layout_marginRight">@dimen/base_dp_36</item>
+        <item name="android:background">@drawable/common_round_rectangle_bg_theme_gradient</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/view_white</item>
+        <item name="android:textSize">@dimen/base_dp_20</item>
+    </style>
+
 
 </resources>
