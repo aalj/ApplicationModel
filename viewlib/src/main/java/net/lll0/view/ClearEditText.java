@@ -15,6 +15,7 @@ import net.lll0.viewlib.R;
 
 /**
  * Created by liangjun on 2018/11/13
+ * 带有删除按钮的EditText
  */
 public class ClearEditText extends AppCompatEditText implements View.OnFocusChangeListener, View.OnTouchListener, TextWatcher {
 
