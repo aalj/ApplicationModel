@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KotlinMainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试Kotlin相关的使用" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入内容"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <net.lll0.view.ClearEditText
+        android:id="@+id/clear_text"
+        style="@style/ViewEditStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edit" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_dp_1"
+        android:background="@color/view_FFA4A4A4"
+        app:layout_constraintTop_toBottomOf="@id/clear_text" />
+
+</android.support.constraint.ConstraintLayout>
