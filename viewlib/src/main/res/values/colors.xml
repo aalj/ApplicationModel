@@ -8,5 +8,7 @@
     <color name="view_FFC2C2C2">#FFC2C2C2</color>
     <color name="view_FF4599F5">#FF4599F5</color>
     <color name="view_FF45BEF5">#FF45BEF5</color>
-<color name="view_white">#FFFFFFFF</color>
+    <color name="view_white">#FFFFFFFF</color>
+    <color name="view_FFC1D6EE">#FFC1D6EE</color>
+    <color name="view_FFC3DFEF">#FFC3DFEF</color>
 </resources>
