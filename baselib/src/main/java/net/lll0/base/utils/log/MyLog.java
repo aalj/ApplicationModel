@@ -5,7 +5,7 @@ import android.util.Log;
 
 
 import net.lll0.base.BaseApplication;
-import net.lll0.base.utils.file.FileUtil;
+import net.lll0.base.utils.file.CacheFileUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -86,7 +86,7 @@ public class MyLog {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String ft = format.format(new Date());
             String msg = String.format("%s		%s    %s", ft, s, m);
-            FileUtil.writeLogMessage(BaseApplication.application, msg);
+            CacheFileUtil.writeLogMessage(BaseApplication.application, msg);
         }
     }
 

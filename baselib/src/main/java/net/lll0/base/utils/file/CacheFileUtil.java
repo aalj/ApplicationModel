@@ -9,10 +9,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.math.BigDecimal;
 
-/**
- * Created by bumu-zhz on 2015/10/26.
- */
-public class FileUtil {
+
+public class CacheFileUtil {
     private static final String PUSH_FILE_NAME = "push.log";
     private static final String LOG_FILE_NAME = "log.log";
 
