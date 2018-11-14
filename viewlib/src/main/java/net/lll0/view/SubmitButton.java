@@ -36,7 +36,6 @@ public class SubmitButton extends AppCompatButton {
         setTextColor(getResources().getColor(R.color.view_white));
         setGravity(Gravity.CENTER);
         setTextSize(COMPLEX_UNIT_PX, getDimenInt(R.dimen.base_dp_20));
-        MyLog.e(String.valueOf("获取的dieng20对应的大小" + getDimenInt(R.dimen.base_dp_20)));
     }
 
     @Override
