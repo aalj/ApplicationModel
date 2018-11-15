@@ -33,4 +33,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:'+rootProject.ext.version["test-runner"]
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:'+rootProject.ext.version["espresso-core"]
     implementation project(":baselib")
+    implementation rootProject.ext.dependencies["PickerView"]
 }
