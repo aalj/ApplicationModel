@@ -6,11 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".KotlinMainActivity">
 
+    <net.lll0.view.convenientbanner.ConvenientBanner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        app:autoTurningTime="1000"
+        app:canLoop="true"
+        android:layout_height="200dp" />
+
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试Kotlin相关的使用" />
+        android:text="测试Kotlin相关的使用"
+        app:layout_constraintTop_toBottomOf="@id/banner" />
 
     <EditText
         android:id="@+id/edit"
@@ -19,33 +27,58 @@
         android:hint="输入内容"
         app:layout_constraintTop_toBottomOf="@id/text" />
 
-    <net.lll0.view.ClearEditText
-        android:id="@+id/clear_text"
-        style="@style/ViewEditStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toLeftOf="@id/sms"
-        app:layout_constraintTop_toBottomOf="@id/edit" />
-
-
-    <View
-        android:id="@+id/line1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/base_dp_1"
-        android:background="@color/view_FFA4A4A4"
-        app:layout_constraintTop_toBottomOf="@id/clear_text" />
 
     <net.lll0.view.SendSmsButton
         android:id="@+id/sms"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_dp_30"
         android:textSize="@dimen/base_dp_20"
-        app:layout_constraintTop_toBottomOf="@id/line1" />
+        app:layout_constraintTop_toBottomOf="@id/edit" />
 
     <Button
         android:id="@+id/restart"
         style="@style/ButtonStyle"
         android:text="倒计时重置"
         app:layout_constraintTop_toBottomOf="@id/sms" />
+
+    <net.lll0.view.SubmitButton
+        android:id="@+id/costomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看内容"
+        app:layout_constraintTop_toBottomOf="@id/restart" />
+
+    <net.lll0.view.DownLineEditText
+        android:id="@+id/downLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="我是哟个输入框"
+        app:layout_constraintTop_toBottomOf="@id/costomView" />
+
+    <net.lll0.view.ClearEditText
+        android:id="@+id/clear_text"
+        style="@style/ViewEditStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:inputType="textNoSuggestions"
+        app:layout_constraintTop_toBottomOf="@id/downLine" />
+
+    <Button
+        android:id="@+id/picker_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示时间选择器"
+        app:layout_constraintTop_toBottomOf="@id/clear_text" />
+
+    <Button
+        android:id="@+id/picker_opsition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示时间选择器"
+        app:layout_constraintLeft_toRightOf="@id/picker_time"
+        app:layout_constraintTop_toBottomOf="@id/clear_text" />
 
 </android.support.constraint.ConstraintLayout>

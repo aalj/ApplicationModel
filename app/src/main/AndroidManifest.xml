@@ -4,6 +4,7 @@
     package="net.lll0.app">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".MyApplication"
@@ -13,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="android:name"
+        tools:replace="name,appComponentFactory"
+        android:appComponentFactory="whateverString"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".KotlinMainActivity">
             <intent-filter>
