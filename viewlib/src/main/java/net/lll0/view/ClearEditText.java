@@ -1,16 +1,19 @@
 package net.lll0.view;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
+import net.lll0.utils.time.DimenUtils;
 import net.lll0.viewlib.R;
 
 /**
@@ -18,6 +21,13 @@ import net.lll0.viewlib.R;
  * 带有删除按钮的EditText
  */
 public class ClearEditText extends AppCompatEditText implements View.OnFocusChangeListener, View.OnTouchListener, TextWatcher {
+
+    private int mRight;
+    private int mBottom;
+    private int mTop;
+    private int mLeft;
+
+    Paint paint = null;
 
     private Drawable clearIcon;
     private OnFocusChangeListener focusChangeListener;
@@ -39,19 +49,25 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
     }
 
     private void initialize(Context context) {
+
+        paint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
+        paint.setStrokeWidth(10);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setColor(getResources().getColor(R.color.view_FF45AAF5));
+
         //获取图片 放置到控件末尾
         Drawable drawable = ContextCompat.getDrawable(context, R.mipmap.icon_input_del);
         clearIcon = drawable;
         clearIcon.setBounds(0, 0, clearIcon.getIntrinsicWidth(), clearIcon.getIntrinsicHeight());
         //初始化的时候不显示山按钮
         setClearVisible(false);
-        //输入监听
         super.addTextChangedListener(this);
-        //点击监听
         super.setOnTouchListener(this);
-        //获取焦点
         super.setOnFocusChangeListener(this);
-
+        setTextColor(getResources().getColor(R.color.view_FF333333));
+        setHintTextColor(getResources().getColor(R.color.view_FFB8B8B8));
+        setPadding(0, DimenUtils.getDimenInt(getContext(), R.dimen.base_dp_10), DimenUtils.getDimenInt(getContext(), R.dimen.base_dp_10), DimenUtils.getDimenInt(getContext(), R.dimen.base_dp_10));
+        setTextSize(TypedValue.COMPLEX_UNIT_PX, DimenUtils.getDimenInt(getContext(), R.dimen.base_dp_17));
 
     }
 
@@ -64,7 +80,7 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
         setCompoundDrawables(drawables[0],
                 drawables[1],
                 isVisible ? clearIcon : null,
-                drawables[3]);
+                null);
 
     }
 
@@ -92,6 +108,26 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
             }
         }
         return touchListener != null && touchListener.onTouch(v, event);
+    }
+
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        //获得控件可用用的宽度
+        //获得控价的高度
+        super.onDraw(canvas);
+        if (paint != null) {
+            canvas.drawLine(mLeft, mBottom, mRight, mBottom, paint);
+        }
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        mRight = getMeasuredWidth();
+        mLeft = 0;
+        mTop = 0;
+        mBottom = getMeasuredHeight();
     }
 
     @Override
