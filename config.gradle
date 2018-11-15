@@ -28,7 +28,8 @@ ext {
             "adapter-rxjava2"    : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
             "converter-gson"     : "com.squareup.retrofit2:converter-gson:2.3.0",
             "rxrelay"            : "com.jakewharton.rxrelay2:rxrelay:2.0.0",
-            "gson"               : "com.google.code.gson:gson:2.8.2"
+            "gson"               : "com.google.code.gson:gson:2.8.2",
+            "PickerView"         : "com.contrarywind:Android-PickerView:4.1.6"
     ]
 
 }
