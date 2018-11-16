@@ -80,7 +80,7 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
         setCompoundDrawables(drawables[0],
                 drawables[1],
                 isVisible ? clearIcon : null,
-                null);
+                drawables[3]);
 
     }
 
