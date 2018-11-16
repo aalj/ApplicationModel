@@ -1,4 +1,4 @@
-package net.lll0.view;
+package net.lll0.widget;
 
 import android.content.Context;
 import android.support.annotation.DimenRes;
@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.ViewGroup;
 
-import net.lll0.base.utils.log.MyLog;
 import net.lll0.viewlib.R;
 
 import static android.util.TypedValue.COMPLEX_UNIT_PX;

@@ -1,4 +1,4 @@
-package net.lll0.view;
+package net.lll0.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
