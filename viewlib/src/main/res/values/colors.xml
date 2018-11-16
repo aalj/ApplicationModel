@@ -15,4 +15,9 @@
     <color name="view_FFB8B8B8">#FFB8B8B8</color>
     <color name="view_FFF5F5F9">#FFF5F5F9</color>
     <color name="view_FF999999">#FF999999</color>
+    <color name="view_00FFFFFF">#00FFFFFF</color>
+    <color name="view_66999999">#66999999</color>
+    <color name="view_FF000000">#FF000000</color>
+
+
 </resources>
