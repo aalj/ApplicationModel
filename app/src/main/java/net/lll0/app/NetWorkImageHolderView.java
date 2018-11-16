@@ -1,15 +1,12 @@
 package net.lll0.app;
 
 import android.app.Activity;
-import android.graphics.ImageDecoder;
-import android.graphics.drawable.Animatable;
-import android.support.design.animation.ImageMatrixProperty;
 import android.view.View;
 import android.widget.ImageView;
 
 
 import net.lll0.image.ImageLoaderProxy;
-import net.lll0.view.convenientbanner.holder.Holder;
+import net.lll0.widget.convenientbanner.holder.Holder;
 
 
 /**

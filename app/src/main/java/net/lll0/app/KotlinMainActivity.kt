@@ -6,7 +6,6 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_kotlin_main.*
@@ -15,22 +14,19 @@ import net.lll0.base.http.HttpCreateClickBuild
 import net.lll0.base.utils.json.GsonUtil
 import net.lll0.base.utils.log.MyLog
 import net.lll0.utils.time.PickerUtils
-import net.lll0.view.convenientbanner.ConvenientBanner
-import net.lll0.view.convenientbanner.holder.CBViewHolderCreator
-import net.lll0.view.convenientbanner.holder.Holder
-import net.lll0.view.convenientbanner.listener.OnItemClickListener
+import net.lll0.widget.convenientbanner.ConvenientBanner
+import net.lll0.widget.convenientbanner.holder.CBViewHolderCreator
+import net.lll0.widget.convenientbanner.holder.Holder
+import net.lll0.widget.convenientbanner.listener.OnItemClickListener
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.Request
 import okhttp3.Response
-import uk.co.senab.photoview.PhotoViewAttacher
 import java.io.IOException
 import java.util.*
 
 class KotlinMainActivity : AppCompatActivity(), View.OnClickListener, OnItemClickListener {
-    override fun onItemClick(position: Int) {
-        MyLog.e("我在干嘛---->  $position")
-    }
+
 
     var tag: String = "KotlinMainActivity"
     var count: Int = 0
@@ -90,8 +86,9 @@ class KotlinMainActivity : AppCompatActivity(), View.OnClickListener, OnItemClic
         banner.setOnItemClickListener(this)
     }
 
-
-
+    override fun onItemClick(position: Int) {
+        MyLog.e("我在干嘛---->  $position")
+    }
     override fun onClick(v: View?) {
         //? 表示变量是可以为空的
         //!! 表示不为空的情况下执行

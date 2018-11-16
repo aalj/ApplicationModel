@@ -1,84 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".KotlinMainActivity">
 
-    <net.lll0.view.convenientbanner.ConvenientBanner
-        android:id="@+id/banner"
+    <LinearLayout
         android:layout_width="match_parent"
-        app:autoTurningTime="1000"
-        app:canLoop="true"
-        android:layout_height="200dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="测试Kotlin相关的使用"
-        app:layout_constraintTop_toBottomOf="@id/banner" />
+        <net.lll0.widget.convenientbanner.ConvenientBanner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:autoTurningTime="1000"
+            app:canLoop="true" />
 
-    <EditText
-        android:id="@+id/edit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="输入内容"
-        app:layout_constraintTop_toBottomOf="@id/text" />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试Kotlin相关的使用"
+            app:layout_constraintTop_toBottomOf="@id/banner" />
+
+        <EditText
+            android:id="@+id/edit"
+            style="@style/ViewEditStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入内容"
+            app:layout_constraintTop_toBottomOf="@id/text" />
 
 
-    <net.lll0.view.SendSmsButton
-        android:id="@+id/sms"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/base_dp_30"
-        android:textSize="@dimen/base_dp_20"
-        app:layout_constraintTop_toBottomOf="@id/edit" />
+        <net.lll0.widget.SendSmsButton
+            android:id="@+id/sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp_30"
+            android:textSize="@dimen/base_dp_20"
+            app:layout_constraintTop_toBottomOf="@id/edit" />
 
-    <Button
-        android:id="@+id/restart"
-        style="@style/ButtonStyle"
-        android:text="倒计时重置"
-        app:layout_constraintTop_toBottomOf="@id/sms" />
+        <Button
+            android:id="@+id/restart"
+            style="@style/SubmitButtonStyle"
+            android:text="倒计时重置"
+            app:layout_constraintTop_toBottomOf="@id/sms" />
 
-    <net.lll0.view.SubmitButton
-        android:id="@+id/costomView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="查看内容"
-        app:layout_constraintTop_toBottomOf="@id/restart" />
+        <net.lll0.widget.SubmitButton
+            android:id="@+id/costomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看内容"
+            app:layout_constraintTop_toBottomOf="@id/restart" />
 
-    <net.lll0.view.DownLineEditText
-        android:id="@+id/downLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:hint="我是哟个输入框"
-        app:layout_constraintTop_toBottomOf="@id/costomView" />
+        <net.lll0.widget.DownLineEditText
+            android:id="@+id/downLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="我是哟个输入框"
+            app:layout_constraintTop_toBottomOf="@id/costomView" />
 
-    <net.lll0.view.ClearEditText
-        android:id="@+id/clear_text"
-        style="@style/ViewEditStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:inputType="textNoSuggestions"
-        app:layout_constraintTop_toBottomOf="@id/downLine" />
+        <net.lll0.widget.ClearEditText
+            android:id="@+id/clear_text"
+            android:layout_marginTop="@dimen/base_dp_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="textNoSuggestions" />
 
-    <Button
-        android:id="@+id/picker_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="显示时间选择器"
-        app:layout_constraintTop_toBottomOf="@id/clear_text" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/picker_opsition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="显示时间选择器"
-        app:layout_constraintLeft_toRightOf="@id/picker_time"
-        app:layout_constraintTop_toBottomOf="@id/clear_text" />
+            <Button
+                android:id="@+id/picker_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="显示时间选择器"
+                app:layout_constraintTop_toBottomOf="@id/clear_text" />
 
-</android.support.constraint.ConstraintLayout>
+            <Button
+                android:id="@+id/picker_opsition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="显示条件选择器"
+                app:layout_constraintLeft_toRightOf="@id/picker_time"
+                app:layout_constraintTop_toBottomOf="@id/clear_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <net.lll0.widget.circleimageview.CircleImageView
+                android:layout_width="@dimen/base_dp_90"
+                android:layout_height="@dimen/base_dp_90"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher" />
+
+            <net.lll0.widget.circleimageview.CircleImageView
+                android:layout_width="@dimen/base_dp_90"
+                android:layout_height="@dimen/base_dp_90"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@android:color/holo_red_dark"
+                app:civ_border_width="@dimen/base_dp_1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="@dimen/base_dp_5"
+                android:layout_weight="1"
+                android:text="带圆角" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_dp_5"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="禁用了" />
+
+            <Button
+                style="@style/RectButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_dp_5"
+                android:layout_weight="1"
+                android:text="不带圆角" />
+
+
+        </LinearLayout>
+
+        <net.lll0.widget.ClearEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dp_30"
+            android:background="@null" />
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
