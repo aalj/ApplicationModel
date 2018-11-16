@@ -2,6 +2,8 @@
     package="net.lll0.base">
 
 
-    <application android:name=".BaseApplication"></application>
+    <application
+        android:name=".BaseApplication"
+        android:networkSecurityConfig="@xml/network_security_config"></application>
 
 </manifest>
