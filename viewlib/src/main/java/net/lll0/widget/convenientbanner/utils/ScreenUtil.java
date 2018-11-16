@@ -1,4 +1,4 @@
-package net.lll0.view.convenientbanner.utils;
+package net.lll0.widget.convenientbanner.utils;
 
 import android.annotation.TargetApi;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package net.lll0.view.convenientbanner.view;
+package net.lll0.widget.convenientbanner.view;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

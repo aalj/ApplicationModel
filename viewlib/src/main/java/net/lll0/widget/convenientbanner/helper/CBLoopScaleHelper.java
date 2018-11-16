@@ -1,4 +1,4 @@
-package net.lll0.view.convenientbanner.helper;
+package net.lll0.widget.convenientbanner.helper;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PagerSnapHelper;
@@ -6,9 +6,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
-import net.lll0.view.convenientbanner.adapter.CBPageAdapter;
-import net.lll0.view.convenientbanner.listener.OnPageChangeListener;
-import net.lll0.view.convenientbanner.view.CBLoopViewPager;
+import net.lll0.widget.convenientbanner.adapter.CBPageAdapter;
+import net.lll0.widget.convenientbanner.listener.OnPageChangeListener;
+import net.lll0.widget.convenientbanner.view.CBLoopViewPager;
 
 
 /**

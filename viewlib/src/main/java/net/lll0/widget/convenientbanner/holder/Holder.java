@@ -1,4 +1,4 @@
-package net.lll0.view.convenientbanner.holder;
+package net.lll0.widget.convenientbanner.holder;
 
 /**
  * Created by Sai on 15/12/14.

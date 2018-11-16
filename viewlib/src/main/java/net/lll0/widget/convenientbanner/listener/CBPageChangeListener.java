@@ -1,4 +1,4 @@
-package net.lll0.view.convenientbanner.listener;
+package net.lll0.widget.convenientbanner.listener;
 
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;

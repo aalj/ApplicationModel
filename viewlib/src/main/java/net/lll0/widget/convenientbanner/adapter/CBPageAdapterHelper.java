@@ -1,10 +1,10 @@
-package net.lll0.view.convenientbanner.adapter;
+package net.lll0.widget.convenientbanner.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.lll0.view.convenientbanner.utils.ScreenUtil;
+import net.lll0.widget.convenientbanner.utils.ScreenUtil;
 
 
 /**

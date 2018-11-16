@@ -1,4 +1,4 @@
-package net.lll0.view.convenientbanner.adapter;
+package net.lll0.widget.convenientbanner.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import net.lll0.view.convenientbanner.holder.CBViewHolderCreator;
-import net.lll0.view.convenientbanner.holder.Holder;
-import net.lll0.view.convenientbanner.listener.OnItemClickListener;
+import net.lll0.widget.convenientbanner.holder.CBViewHolderCreator;
+import net.lll0.widget.convenientbanner.holder.Holder;
+import net.lll0.widget.convenientbanner.listener.OnItemClickListener;
 
 import java.util.List;
 

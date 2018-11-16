@@ -1,4 +1,4 @@
-package net.lll0.view.convenientbanner;
+package net.lll0.widget.convenientbanner;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,13 +13,13 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 
-import net.lll0.view.convenientbanner.adapter.CBPageAdapter;
-import net.lll0.view.convenientbanner.helper.CBLoopScaleHelper;
-import net.lll0.view.convenientbanner.holder.CBViewHolderCreator;
-import net.lll0.view.convenientbanner.listener.CBPageChangeListener;
-import net.lll0.view.convenientbanner.listener.OnItemClickListener;
-import net.lll0.view.convenientbanner.listener.OnPageChangeListener;
-import net.lll0.view.convenientbanner.view.CBLoopViewPager;
+import net.lll0.widget.convenientbanner.adapter.CBPageAdapter;
+import net.lll0.widget.convenientbanner.helper.CBLoopScaleHelper;
+import net.lll0.widget.convenientbanner.holder.CBViewHolderCreator;
+import net.lll0.widget.convenientbanner.listener.CBPageChangeListener;
+import net.lll0.widget.convenientbanner.listener.OnItemClickListener;
+import net.lll0.widget.convenientbanner.listener.OnPageChangeListener;
+import net.lll0.widget.convenientbanner.view.CBLoopViewPager;
 import net.lll0.viewlib.R;
 
 import java.lang.ref.WeakReference;
