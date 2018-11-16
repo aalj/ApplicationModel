@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <net.lll0.view.convenientbanner.view.CBLoopViewPager
+    <net.lll0.widget.convenientbanner.view.CBLoopViewPager
         android:id="@+id/cbLoopViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
