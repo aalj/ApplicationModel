@@ -15,7 +15,7 @@
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            app:autoTurningTime="1000"
+            app:autoTurningTime="3000"
             app:canLoop="true" />
 
         <TextView
@@ -157,6 +157,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/base_dp_30"
             android:background="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <net.lll0.widget.DotView
+                android:layout_gravity="center"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 

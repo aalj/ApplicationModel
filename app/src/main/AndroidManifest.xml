@@ -4,28 +4,29 @@
     package="net.lll0.app">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
+        android:appComponentFactory="whateverString"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:replace="name,appComponentFactory"
-        android:appComponentFactory="whateverString"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".KotlinMainActivity">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="name,appComponentFactory">
+        <activity android:name=".KotlinMainActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".DotGroupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".MainActivity2"></activity>
     </application>
 
 </manifest>
