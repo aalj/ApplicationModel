@@ -37,6 +37,7 @@ dependencies {
     testImplementation 'junit:junit:'+rootProject.ext.version["junit-version"]
     androidTestImplementation 'com.android.support.test:runner:'+rootProject.ext.version["test-runner"]
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:'+rootProject.ext.version["espresso-core"]
+
     implementation project(":mvplib")
     api rootProject.ext.dependencies["okhttp"]
     api rootProject.ext.dependencies["rxjava2"]
