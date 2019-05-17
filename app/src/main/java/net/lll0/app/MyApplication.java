@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.multidex.MultiDex;
 
 import net.lll0.base.BaseApplication;
+import net.lll0.base.utils.RefInvoke;
 import net.lll0.base.utils.log.MyLog;
 
 /**

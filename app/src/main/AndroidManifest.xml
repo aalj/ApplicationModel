@@ -18,9 +18,8 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="name,appComponentFactory">
         <activity android:name=".KotlinMainActivity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".MainActivity2" />
-        <activity android:name=".DotGroupActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
